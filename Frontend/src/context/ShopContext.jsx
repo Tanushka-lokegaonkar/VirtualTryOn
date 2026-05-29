@@ -6,11 +6,17 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
     const currency = '₹';
     const deliveryCharge = 10;
+    const [search, setSearch] = useState('');
+    const [showSearch, setShowSearch] = useState(false);
 
     const value = {
         products,
         currency,
-        deliveryCharge
+        deliveryCharge,
+        search,
+        setSearch,
+        showSearch,
+        setShowSearch
     }
 
     return (

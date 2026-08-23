@@ -10,6 +10,6 @@ userRouter.post('/login', loginUser);
 userRouter.post('/register', registerUser);
 
 // Route for getting user profile
-userRouter.get('/admin', adminLogin);
+userRouter.post('/admin', adminLogin);
 
 export default userRouter;

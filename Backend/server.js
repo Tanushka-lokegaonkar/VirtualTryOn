@@ -5,6 +5,7 @@ import e from 'express';
 import connectDB from './config/mongodb.js';
 import connectCloudinary from './config/cloudinary.js';
 import userRoutes from './routes/userRoute.js';
+import productRoutes from './routes/productRoute.js';
 
 // App config
 const app = express();
@@ -18,6 +19,7 @@ app.use(cors());
 
 // API Endpoints
 app.use('/api/user', userRoutes);
+app.use('/api/product', productRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).send('Hello World');
